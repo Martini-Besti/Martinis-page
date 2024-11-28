@@ -16,6 +16,12 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.video-main-container video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 .hobbie-list {
   z-index: 9;
   text-align: left;
