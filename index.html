@@ -8,78 +8,147 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    
-        <nav class="sticky w-full bg-blue-600">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <!-- Mobile menu button-->
-                  <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="absolute -inset-0.5"></span>
-                    <span class="sr-only">Open main menu</span>
+    <nav class="sticky w-full bg-blue-600">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
 
-                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+              <svg
+                class="block size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
 
-                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div class="flex shrink-0 items-center">
-                    <img class="h-10 w-auto rounded-md" src="https://media.istockphoto.com/id/1288622284/vector/letter-m-icon.jpg?s=612x612&w=0&k=20&c=nQ5hhD7ScR9QDD6rcKlcy6XOt-qAiCpuujQQFw4CdnM=" alt="My Logo">
-                  </div>
-                  <div class="hidden sm:ml-6 sm:block">
-                    <div class="flex space-x-4">
-                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                      <a href="index.html" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-                      <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                      <a href="hobbies.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hobbies</a>
-                      <a href="video.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Video</a>
-                      <a href="finalthoughts.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Final Thoughts</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          
-                  <!-- Profile dropdown -->
-                  <div class="relative ml-3">
-                    <div>
-                      <button class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">Open user menu</span>
-                        <img class="size-8 rounded-full" src="https://mail.google.com/mail/u/0?ui=2&ik=afa3b823fb&attid=0.1&permmsgid=msg-f:1816869807566140828&th=1936d176bb1cb59c&view=att&zw&disp=safe" alt="Picture of Martina">
-                      </button>
-                    </div> 
-                  </div>
-                </div>
+              <svg
+                class="hidden size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex shrink-0 items-center">
+              <img
+                class="h-10 w-auto rounded-md"
+                src="https://media.istockphoto.com/id/1288622284/vector/letter-m-icon.jpg?s=612x612&w=0&k=20&c=nQ5hhD7ScR9QDD6rcKlcy6XOt-qAiCpuujQQFw4CdnM="
+                alt="My Logo"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="index.html"
+                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page"
+                  >Home</a
+                >
+                <a
+                  href="about.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >About</a
+                >
+                <a
+                  href="hobbies.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >Hobbies</a
+                >
+                <a
+                  href="video.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >Video</a
+                >
+                <a
+                  href="finalthoughts.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >Final Thoughts</a
+                >
               </div>
-            </div>            
-          </nav>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <div>
+                <button
+                  class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="size-8 rounded-full"
+                    src="https://mail.google.com/mail/u/0?ui=2&ik=afa3b823fb&attid=0.1&permmsgid=msg-f:1816869807566140828&th=1936d176bb1cb59c&view=att&zw&disp=safe"
+                    alt="Picture of Martina"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div class="main-container">
-        <h1>Martini's First Webpage</h1>
-        <h2>by Martina Best</h2>
-        <img class="size-64 p-6 justify-center rounded-full" src="https://mail.google.com/mail/u/0?ui=2&ik=afa3b823fb&attid=0.1&permmsgid=msg-a:r-5216595290935490562&th=1936da56b24273b9&view=att&disp=safe&realattid=f_m3zvly6r0&zw" alt="Picture of a Rose">
-</div>
+      <h1>Martini's First Webpage</h1>
+      <h2>by Martina Best</h2>
+      <img
+        class="size-64 p-6 justify-center rounded-full"
+        src="https://mail.google.com/mail/u/0?ui=2&ik=afa3b823fb&attid=0.1&permmsgid=msg-a:r-5216595290935490562&th=1936da56b24273b9&view=att&disp=safe&realattid=f_m3zvly6r0&zw"
+        alt="Picture of a Rose"
+      />
+    </div>
 
-<footer class="new_footer_area bg_color">
-    <div class="new_footer_top">
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
         <div class="footer_bg">
-            <div class="footer_bg_one"></div>
-            <div class="footer_bg_two"></div>
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
         </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container"></div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>
+        Copyright reserved 2024 ♥ ♥ but you can copy it if you really want to,
+        I'll let ya ♥ ♥
+      </p>
     </div>
-    <div class="footer_bottom">
-        <div class="container">
-
-        </div>
-    </div>
-</footer>
-<div class="copyright">
-    <p>Copyright reserved 2024 ♥ ♥ but you can copy it if you really want to, I'll let ya ♥ ♥</p>
-</div>
-</section>
   </body>
 </html>
