@@ -1,7 +1,10 @@
+html,
 body {
-  background-color: #a1b8ce;
+  background-color: #466d92;
+  margin: 0;
+  height: auto;
+  overflow: auto;
 }
-
 .main-container {
   background-image: linear-gradient(rgb(247, 228, 241), rgb(190, 105, 227));
   align-items: center;
@@ -45,25 +48,24 @@ body {
 }
 
 .snow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 5;
 }
 
 .snowflake {
-  animation-name: fall, shake;
-  animation-duration: 10s, 5s;
-  animation-timing-function: linear, ease-in-out;
-  animation-iteration-count: infinite, infinite;
   position: absolute;
-  left: 200px;
-  z-index: 7;
-  filter: blur(0.5px);
+  top: -10%;
+  animation: fall2 linear infinite;
+  animation-duration: 10s;
 }
 
 .snowflake1 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 10s, 3s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -76,7 +78,7 @@ body {
 }
 
 .snowflake2 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 8s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -89,7 +91,7 @@ body {
 }
 
 .snowflake3 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 9s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -102,7 +104,7 @@ body {
 }
 
 .snowflake4 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 15s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -114,7 +116,7 @@ body {
 }
 
 .snowflake5 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 15s, 4s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -128,7 +130,7 @@ body {
 }
 
 .snowflake6 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 12s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -141,7 +143,7 @@ body {
 }
 
 .snowflake7 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 11s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -153,7 +155,7 @@ body {
 }
 
 .snowflake8 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 12s, 4s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -167,7 +169,7 @@ body {
 }
 
 .snowflake9 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 12s, 4s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -181,7 +183,7 @@ body {
 }
 
 .snowflake10 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 15s, 9s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -194,7 +196,7 @@ body {
 }
 
 .snowflake11 {
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 12s, 7s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -208,7 +210,7 @@ body {
 
 .snowflake12 {
   /*small*/
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 12s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -222,7 +224,7 @@ body {
 
 .snowflake13 {
   /*small*/
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 10s, 5s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -236,7 +238,7 @@ body {
 
 .snowflake14 {
   /*small*/
-  animation-name: fall, shake;
+  animation-name: fall2;
   animation-duration: 9s, 4s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
@@ -248,25 +250,15 @@ body {
   filter: blur(0.5px);
 }
 
-@keyframes fall {
+@keyframes fall2 {
   0% {
-    top: -10%;
-  }
-
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes shake {
-  0% {
-    transform: translatex(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
-    transform: translatex(10px);
+    transform: translateY(50vh) translateX(10px); /* Incorporate horizontal shake here */
   }
   100% {
-    transform: translatex(0);
+    transform: translateY(100vh) translateX(0);
   }
 }
 
@@ -298,7 +290,6 @@ body {
 }
 
 .snow-peak-1a {
-  /*sharp snow edge*/
   position: absolute;
   content: "";
   bottom: -130px;
@@ -613,14 +604,13 @@ body {
 }
 
 h1 {
-  color: violet;
-  font-family: cursive;
-  font-size: 80px;
-  text-align: center;
+  color: rgb(44, 35, 41) !important;
+  font-family: cursive !important;
+  font-size: 80px !important;
+  text-align: center !important;
 }
-
 h2 {
-  color: violet;
+  color: rgb(61, 60, 61);
   font-family: monospace;
   font-size: 30px;
   text-align: center;
@@ -756,14 +746,7 @@ button:focus {
 .f_size_18 {
   font-size: 18px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #4b505e;
-}
+
 .new_footer_top .f_widget.about-widget .f_list li a {
   color: #6a7695;
 }
@@ -835,170 +818,178 @@ h6 {
 }
 /* Basic container for background */
 .star-background {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #170c41;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #170c41;
+}
+
+/* Static stars layer */
+.stars {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1px 1px at 20% 20%, white, transparent),
+    radial-gradient(1.5px 1.5px at 40% 60%, white, transparent),
+    radial-gradient(2px 2px at 80% 70%, white, transparent),
+    radial-gradient(1px 1px at 60% 90%, white, transparent),
+    radial-gradient(1.5px 1.5px at 30% 50%, white, transparent),
+    radial-gradient(1px 1px at 10% 80%, white, transparent);
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Twinkling stars layer */
+.twinkling {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      1px 1px at 25% 35%,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(1px 1px at 50% 75%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(
+      1.5px 1.5px at 90% 40%,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(2px 2px at 70% 90%, rgba(255, 255, 255, 0.9), transparent);
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  animation: twinkle 3s infinite alternate;
+}
+
+/* Twinkling animation */
+@keyframes twinkle {
+  0% {
+    opacity: 0.7;
   }
-  
-  /* Static stars layer */
-  .stars {
-    width: 100%;
-    height: 100%;
-    background: 
-      radial-gradient(1px 1px at 20% 20%, white, transparent),
-      radial-gradient(1.5px 1.5px at 40% 60%, white, transparent),
-      radial-gradient(2px 2px at 80% 70%, white, transparent),
-      radial-gradient(1px 1px at 60% 90%, white, transparent),
-      radial-gradient(1.5px 1.5px at 30% 50%, white, transparent),
-      radial-gradient(1px 1px at 10% 80%, white, transparent);
-    background-size: 200px 200px;
-    background-repeat: repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  100% {
+    opacity: 1;
   }
-  
-  /* Twinkling stars layer */
-  .twinkling {
-    width: 100%;
-    height: 100%;
-    background: 
-      radial-gradient(1px 1px at 25% 35%, rgba(255, 255, 255, 0.8), transparent),
-      radial-gradient(1px 1px at 50% 75%, rgba(255, 255, 255, 0.6), transparent),
-      radial-gradient(1.5px 1.5px at 90% 40%, rgba(255, 255, 255, 0.7), transparent),
-      radial-gradient(2px 2px at 70% 90%, rgba(255, 255, 255, 0.9), transparent);
-    background-size: 300px 300px;
-    background-repeat: repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    animation: twinkle 3s infinite alternate;
+}
+
+/* Falling words container */
+.falling-words-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Falling words style */
+.falling-word {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  animation: fall 6s linear infinite;
+  animation-delay: var(--delay);
+  left: var(--position); /* Random horizontal position */
+}
+
+/* Falling animation */
+@keyframes fall {
+  from {
+    transform: translateY(-10vh);
+    opacity: 1;
   }
-  
-  /* Twinkling animation */
-  @keyframes twinkle {
-    0% {
-      opacity: 0.7;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Falling words container */
-  .falling-words-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Falling words style */
-  .falling-word {
-    position: absolute;
-    color: white;
-    font-size: 2em;
-    animation: fall 6s linear infinite;
-    animation-delay: var(--delay);
-    left: var(--position);  /* Random horizontal position */
-  }
-  
-  /* Falling animation */
-  @keyframes fall {
-    from {
-      transform: translateY(-10vh);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(100vh);
-      opacity: 0;
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
   }
 }
 .star-background {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background-color: black;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image: radial-gradient(1px 1px at 20% 20%, white, transparent),
+    radial-gradient(1px 1px at 40% 80%, white, transparent),
+    radial-gradient(1px 1px at 60% 40%, white, transparent),
+    radial-gradient(1px 1px at 80% 60%, white, transparent);
+  background-size: 100px 100px;
+  animation: twinkle 3s infinite ease-in-out alternate;
+}
+
+.twinkling {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(1px 1px at 10% 30%, white, transparent),
+    radial-gradient(1px 1px at 50% 70%, white, transparent),
+    radial-gradient(1px 1px at 70% 90%, white, transparent),
+    radial-gradient(1px 1px at 90% 50%, white, transparent);
+  background-size: 150px 150px;
+  animation: twinkle-faster 2s infinite ease-in-out alternate;
+}
+
+/* Base Twinkling Animation */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.6;
   }
-  
-  .stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    background-image: radial-gradient(1px 1px at 20% 20%, white, transparent),
-                      radial-gradient(1px 1px at 40% 80%, white, transparent),
-                      radial-gradient(1px 1px at 60% 40%, white, transparent),
-                      radial-gradient(1px 1px at 80% 60%, white, transparent);
-    background-size: 100px 100px;
-    animation: twinkle 3s infinite ease-in-out alternate;
+  50% {
+    opacity: 1;
   }
-  
-  .twinkling {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(1px 1px at 10% 30%, white, transparent),
-                      radial-gradient(1px 1px at 50% 70%, white, transparent),
-                      radial-gradient(1px 1px at 70% 90%, white, transparent),
-                      radial-gradient(1px 1px at 90% 50%, white, transparent);
-    background-size: 150px 150px;
-    animation: twinkle-faster 2s infinite ease-in-out alternate;
+}
+
+/* Faster Twinkling Animation */
+@keyframes twinkle-faster {
+  0%,
+  100% {
+    opacity: 0.4;
   }
-  
-  /* Base Twinkling Animation */
-  @keyframes twinkle {
-    0%, 100% {
-      opacity: 0.6;
-    }
-    50% {
-      opacity: 1;
-    }
+  50% {
+    opacity: 0.9;
   }
-  
-  /* Faster Twinkling Animation */
-  @keyframes twinkle-faster {
-    0%, 100% {
-      opacity: 0.4;
-    }
-    50% {
-      opacity: 0.9;
-    }
+}
+
+/* Falling words styling */
+.falling-words-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.falling-word {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  animation: fall 10s linear infinite;
+  animation-delay: var(--delay);
+}
+
+/* Animation for falling words */
+@keyframes fall {
+  from {
+    transform: translateY(-10vh);
+    opacity: 1;
   }
-  
-  /* Falling words styling */
-  .falling-words-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
   }
-  
-  .falling-word {
-    position: absolute;
-    color: white;
-    font-size: 2em;
-    animation: fall 10s linear infinite;
-    animation-delay: var(--delay);
-  }
-  
-  /* Animation for falling words */
-  @keyframes fall {
-    from {
-      transform: translateY(-10vh);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
-  }
+}
